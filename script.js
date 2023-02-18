@@ -47,3 +47,20 @@ console.log(employee1.show(employee1.name, employee1.age));
 // Сделайте метод, который выведет на экран зарплату работника.
 
 console.log(employee2.showName(), employee2.showSalary());
+
+// 7. В объект класса Student запишите свойства name и surn
+class Student {
+  letterUp(str) {
+    str = str[0].toUpperCase() + str.slice(1);
+    return str;
+  }
+}
+
+let student1 = new Student();
+student1.name = "john";
+student1.surname = "Snow";
+
+console.log(student1.name + " " + student1.surname);
+
+// 8. Сделайте вспомогательный метод, который будет получать первый символ строки и делать его заглавным.
+console.log(student1.letterUp(student1.name));
