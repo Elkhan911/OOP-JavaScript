@@ -54,13 +54,40 @@ class Student {
     str = str[0].toUpperCase() + str.slice(1);
     return str;
   }
+  getInicials(name, surname) {
+    return name[0] + " " + surname[0];
+  }
 }
 
 let student1 = new Student();
 student1.name = "john";
-student1.surname = "Snow";
+student1.surname = "snow";
 
 console.log(student1.name + " " + student1.surname);
 
 // 8. Сделайте вспомогательный метод, который будет получать первый символ строки и делать его заглавным.
 console.log(student1.letterUp(student1.name));
+
+// 9. Сделайте метод, который вернет инициалы студента, то есть первые буквы его имени и фамилии.
+console.log(
+  student1.getInicials(
+    student1.letterUp(student1.name),
+    student1.letterUp(student1.surname)
+  )
+);
+
+// 10. Объявите в классе Tutor свойства name и surn.
+
+class Tutor {
+  name;
+  surname;
+
+  showName() {
+    return this.name;
+  }
+}
+
+let tutor1 = new Tutor();
+tutor1.name = "Enrique";
+
+console.log(tutor1.showName());
