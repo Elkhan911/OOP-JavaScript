@@ -77,10 +77,11 @@ console.log(
 );
 
 // 10. Объявите в классе Tutor свойства name и surn.
+// При объявлении добавьте вашим свойствам некоторые значения.
 
 class Tutor {
-  name;
-  surname;
+  name = "Leo";
+  surname = "Ivanov";
 
   showName() {
     return this.name;
@@ -88,6 +89,26 @@ class Tutor {
 }
 
 let tutor1 = new Tutor();
-tutor1.name = "Enrique";
 
 console.log(tutor1.showName());
+
+// 11. Сделайте конструктор класса Teacher.
+
+class Teacher {
+  constructor() {
+    console.log("+++");
+  }
+}
+
+new Teacher();
+
+// 12. Передайте в конструктор класса Employee имя и зарплату работника
+
+class Developer {
+  constructor(name, salary) {
+    console.log(name + " " + salary);
+  }
+}
+
+new Developer("Den", "5000");
+new Developer("Kent", 8500);
