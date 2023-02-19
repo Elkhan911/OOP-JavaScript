@@ -112,3 +112,58 @@ class Developer {
 
 new Developer("Den", "5000");
 new Developer("Kent", 8500);
+
+// 13. Передайте в конструктор класса Engineer имя и зарплату работника и запишите их в соответствующие свойства.
+// Сделайте метод, который будет выводить имя работника.
+// Сделайте метод, который будет выводить зарплату работника.
+// Сделайте метод, который будет увеличивать зарплату работника на 10%.
+
+class Engineer {
+  constructor(name, salary) {
+    this.name = name;
+    this.salary = salary;
+  }
+
+  showName() {
+    return this.name;
+  }
+
+  showSalary() {
+    return this.salary;
+  }
+
+  upSalary() {
+    return this.salary + this.salary * 0.1;
+  }
+}
+
+let engineer1 = new Engineer("Tom", 5000);
+
+console.log(engineer1);
+console.log(engineer1.showName());
+console.log(engineer1.showSalary());
+console.log(engineer1.upSalary());
+
+// 14. В классе Professor сделайте три приватных свойства: имя, зарплату и возраст.
+// Передайте параметром конструктора значения этих свойств.
+// Сделайте метод, который выведет данные работника.
+
+class Professor {
+  #name;
+  #salary;
+  #age;
+
+  constructor(name, salary, age) {
+    this.#name = name;
+    this.#salary = salary;
+    this.#age = age;
+  }
+
+  showData() {
+    return this.#name + " " + this.#salary + " " + this.#age;
+  }
+}
+
+let professor1 = new Professor("Luis", 8000, 28);
+
+console.log(professor1.showData());
