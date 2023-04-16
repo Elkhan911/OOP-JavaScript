@@ -167,3 +167,5 @@ class Professor {
 let professor1 = new Professor("Luis", 8000, 28);
 
 console.log(professor1.showData());
+
+//
